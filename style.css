@@ -1,0 +1,447 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Franklin Gothic Medium',
+     'Arial Narrow', Arial, sans-serif;
+}
+
+li{
+    list-style: none;
+    margin: 0 2rem
+}
+
+a{
+    text-decoration: none;
+    color: #fff;
+}
+a:hover{
+    color: black;
+    text-decoration: underline;
+}
+h2{
+    text-align: cente;
+}
+h3{
+    text-align: center;
+}
+p{
+    font-size: 20px;
+    font-weight: normal;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode',
+    
+    'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.bar{
+    width: 30px;
+    display: none;
+}
+
+/* .navbar{
+    display: flex;
+    font-size: 16px;
+    font-weight: 300;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    justify-content: space-between;
+     
+    padding: 0 2rem;
+    position: fixed;
+    
+    width: 100%;
+    top: 0%;
+    color: #f5eeee;
+    align-items: center;
+    background: rgb(2, 116, 116);
+}  */
+
+.navbar{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 9vh;
+    background: rgb(2, 116, 116);
+    color: #fff;
+    padding: 0 2rem;
+    position: fixed;
+    
+    width: 100%;
+    top: 0%;
+    z-index: 1000;
+} 
+nav ul{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+
+nav ul li{
+    margin-left: 30px;
+    list-style: none;
+    cursor: pointer;
+}
+a{
+    text-decoration: none;
+    color: #f5eeee;
+}
+
+/* hospi css code */
+.logo{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 9vh;
+    background: rgb(2, 116, 116);
+    color: #fff;
+    padding: 0 2rem;
+    position: fixed;
+    overflow: hidden;
+    width: 100%;
+    top: 0%;
+    z-index: 1000;
+}
+.logo .menu-list ul {
+    display: flex;
+    justify-content: space-between;
+
+
+}
+.main-el{
+    min-height: 70vh;
+    background: rgb(5, 153, 153);
+    max-width: 100%;
+}
+.main-img{
+    display: flex;
+    justify-content: center;
+    margin-top: 43px;
+    padding: 33px;
+
+    
+}
+.main-el .main-img img{
+ width: 710px;
+}
+.main-el .main-img .phrase{
+    margin-top: 43px;
+    padding: 33px;
+    font-size: 1.3rem;
+    font-family: "poppins" sans-serif;
+    color: #fff;
+}
+.main-el .main-img .phrase h2{
+    font-weight: 300px;
+    color: #fff;
+    padding: 5px;
+
+}
+.main-el .main-img .phrase button{
+    padding: 6px;
+    background: black;
+    color: #fff;
+    font-size: 1.1rem;
+    border: none;
+    margin-top: 1rem;
+    cursor: pointer;
+}
+.main-el .main-img .phrase button:hover{
+    background: inherit;
+    
+}
+* service selection */
+.service{
+    background: aliceblue;
+    min-height:50vh;
+    width: 100%;
+    text-align: center;
+    padding: 50px 0;
+
+}
+.service h2,h3{
+    text-align: center;
+}
+.service .service-el{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.service .service-el img{
+    width: 50px;
+    height: auto;
+}
+.service-img{
+    position: relative;
+    padding: 22px;
+    border: 2px solid black;
+    text-align: center;
+    margin-inline: 22px;
+     width: 190px;
+     margin-top: 22px;
+     cursor: pointer;
+}
+.service .service-el .service-img p{
+    font-size: 1rem;
+    margin: 10px;
+}
+.service-img:hover{
+    background: rgb(3, 98, 129);
+}
+
+.detailCard{
+display: absolute;
+width: 400px;
+
+}
+/*doctors selection*/
+.doc{
+    background: aliceblue;
+    width: 100%;
+    font-size: 2rem;
+    padding-top: 50px;
+    position: relative;
+
+}
+.doc h2,
+h3{
+    text-align: center;
+}
+.doc i{
+    width: 50px;
+    height: 50px;
+    background: #fff;
+    list-style: 50px;
+    line-height: 50px;
+    cursor: pointer;
+    position: absolute;
+    border-radius: 50%;
+    font-size: 1.2rem;
+    text-align: center;
+    top: 50%;   
+    transform: translatey(-50%); 
+    box-shadow: 0 3px 6px rgba(0,0,0,0.23);
+    display: none;
+}
+.doc i:first-child{
+    left: -22px;
+}
+.doc i:last-child{
+    right: -1px;
+}
+.doc .doctor{
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: calc((100% / 3) -16px);
+    gap: 16px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    scrollbar-width: 0;
+    padding-top: 30px;
+}
+.doctor::-webkit-scrollbar{
+    display: none;
+}
+.doctor.no-transition {
+    scroll-behavior: auto;
+}
+.doctor.dragging{
+    scroll-snap-type: none;
+    scroll-behavior: auto;
+}
+.doctor.dragging .doctor-grp{
+    cursor: grab;
+    user-select: none;
+}
+.doctor-grp{
+    margin: 10px;
+    width: 300px;
+    height: 300px;
+    background: white;
+    scroll-snap-align: start;
+    box-shadow: 0 0 50px rgba(0,0,0,0.23 );
+}
+.doctor-grp h4,
+p{
+    font-size: 1rem;
+    text-align: center;
+}
+.doctor img{
+
+    width: 100%;
+    height: 230px;
+    object-fit: cover;
+    padding: 22px;
+    border-radius: 50px;
+}
+
+.blog-el{
+    text-align: center;
+    background:  aliceblue;
+    font-size: 1.2rem;
+    padding-top: 50px;
+    min-height: 20vh;
+
+}
+.blog-el .blog{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 10px;
+    width: 100%;
+    text-align: center;
+}
+.blog-el .blogger{
+    width: 250px;
+    margin: 15px;
+    padding-bottom: 4px;
+    background:  rgb(3, 141, 141);
+    box-shadow: 0 10px 10px rgba(0,0,0,0.23 );
+    transition: all 0.2s ease-in-out;
+} 
+.blog-el .blogger:hover img {
+    transform: scale(.9);
+}
+.blog-el .blogger button{
+    background: rgb(13, 177, 177);
+    border: none;
+    padding: 7px 1.2rem; 
+    margin-top: 10px;
+    cursor: pointer;
+    font-size: 13px;
+    transition: background 0.5s ease-in-out;
+}
+.blog-el .blogger button:hover{
+    background: transparent;
+    border: 1px solid #fff;
+    color: #fff;
+}
+.blog-el .blog img{
+    width: 100%;
+    height: 250px;
+}
+.appointment{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: rgb(6, 104, 104);
+    padding-top: 50px;
+
+    
+}
+.appointment h2{
+    padding: 20px 0;
+}
+
+.book{
+    background: aliceblue;
+    padding: 1rem;
+    width: 40%;
+    overflow: hidden;
+    border-radius: 10px;
+    margin: 20px;
+}
+.book input{
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    margin: 3px 0;
+    border-radius: 5px;
+    border: 1px solid #7e8181;
+    margin-bottom: 10px;
+}.book button{
+    width: 100%;
+    padding: 10px 0;
+    background: rgb(1, 94, 94);
+    cursor: pointer;
+    font-size: 18px;
+    border: none;
+    font-weight: 600;
+    margin-top: 10px;
+}
+.book button:hover{
+    background: rgb(2, 165, 165);
+}
+.footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #7e8181;
+    padding: 16px;
+}
+.footer .about,
+.care, 
+.address,
+.contact{
+text-align: center;
+padding: 10px;
+}
+.footer .about p{
+    text-align: start;
+}
+
+.footer li{ 
+    padding: 2px;
+    font-size: 16px;
+    text-align: center;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode',
+    'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width:900px){
+    nav ul{
+        position: absolute;
+        top: 70px;
+        left: 0;
+        right: 0;
+        flex-direction: column;
+        align-items: center;
+        background: rgb(2, 116, 116);
+        overflow: hidden;
+    }
+    nav ul li{
+        padding: 20px;
+    }
+    .bar{
+        display: block;
+        color: #fff;
+        cursor: pointer;
+    }
+    #menuList{
+        transition: all 0.5s;
+    }
+    .main-el .main-img,.footer{
+        display: block;
+        text-align: center;
+        width: 100%;
+    }
+    
+
+    .main-el .main-img img {
+        width: 80%;
+    }
+}
